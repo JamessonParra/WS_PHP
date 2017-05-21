@@ -64,8 +64,7 @@ class tuClase {
     //Función pública que estará en registada en el WS
     public function nombreFuncionWS($arrayInputCliente){
 
-        $arrayValidCliente = $this->validarDatos($arrayInputCliente);
-        $this->datosSalida = $arrayValidCliente;
+        $this->datosSalida = $this->validarDatos($arrayInputCliente);
 
         //Si la validación se detecto un error
         if(count($this->datosSalida)==1 && !strlen($this->datosSalida[0]["Resp_1"]) && !strlen($this->datosSalida[0]["Resp_2"]) && !strlen($this->datosSalida[0]["Resp_3"]) ) {
@@ -74,7 +73,7 @@ class tuClase {
         //Todo OK
         else{
           //Programar las acciones con conexión que quieras hacer en tu WebService
-          return $this->datosSalida = $arrayInputCliente;
+          return $this->datosSalida;
         }
     }
 
