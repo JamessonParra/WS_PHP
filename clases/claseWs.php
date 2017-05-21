@@ -65,16 +65,16 @@ class tuClase {
     public function nombreFuncionWS($arrayInputCliente){
 
         $arrayValidCliente = $this->validarDatos($arrayInputCliente);
-        $this->datosUser = $arrayValidCliente;
+        $this->datosSalida = $arrayValidCliente;
 
         //Si la validación se detecto un error
-        if(count($this->datosUser)==1 && !strlen($this->datosUser[0]["Resp_1"]) && !strlen($this->datosUser[0]["Resp_2"]) && !strlen($this->datosUser[0]["Resp_3"]) ) {
-            return $this->datosUser;
+        if(count($this->datosSalida)==1 && !strlen($this->datosSalida[0]["Resp_1"]) && !strlen($this->datosSalida[0]["Resp_2"]) && !strlen($this->datosSalida[0]["Resp_3"]) ) {
+            return $this->datosSalida;
         }
         //Todo OK
         else{
           //Programar las acciones con conexión que quieras hacer en tu WebService
-          return $this->datosUser = $arrayInputCliente;
+          return $this->datosSalida = $arrayInputCliente;
         }
     }
 
