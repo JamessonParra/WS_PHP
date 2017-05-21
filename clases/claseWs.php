@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__."/../../ws/lib/nusoap.php");
+require_once(__DIR__."/../lib/nusoap.php");
 
 class tuClase {
     //Variables declaradas para la clase
