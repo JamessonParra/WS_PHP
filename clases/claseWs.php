@@ -35,21 +35,21 @@ class tuClase {
 
         //Usuario No válido
         if(!$this->usuarioIdPlataforma){
-            return array(array("nombre"=>"","apellido"=>"","episodio"=>"","mensaje"=>$mensajeWS["sinAcceso"]));
+            return array(array("Resp_1"=>"","Resp_2"=>"","Resp_3"=>"","mensaje"=>$mensajeWS["sinAcceso"]));
         }
         //Datos vacíos
         else if(!count($arrayInputCliente)){
-            return array(array("nombre"=>"","apellido"=>"","episodio"=>"","mensaje"=>$mensajeWS["sinDatos"]));
+            return array(array("Resp_1"=>"","Resp_2"=>"","Resp_3"=>"","mensaje"=>$mensajeWS["sinDatos"]));
         }
         //Validar que cada dato interno no sea vacío
         else{
             foreach($arrayInputCliente as $nro_fila => $valor_array_uno){
-                foreach($valor_array_uno as $nombreCampo => $valor){
+                foreach($valor_array_uno as $nombreinput => $valor){
                     switch (true){
                         //En estos casos puedes validar los datos que iteran con cliente quien consume
-                        case in_array($nombreCampo, array("campo_1","campo_2","campo_3","campo_4","campo_5")):
+                        case in_array($nombreinput, array("input_1","input_2","input_3","input_4")):
                             if(!strlen(trim($valor)) ){
-                                $arrayInputCliente[$nro_fila] = array("Resp_1"=>"","Resp_2"=>"","Resp_3"=>"","mensaje"=>"Error: ".$nombreCampo."||".$mensajeWS[$nombreCampo."_Null"]);
+                                $arrayInputCliente[$nro_fila] = array("Resp_1"=>"","Resp_2"=>"","Resp_3"=>"","mensaje"=>"Error: ".$nombreinput."||".$mensajeWS[$nombreinput."_Null"]);
                                 break;
                             }
                         break;

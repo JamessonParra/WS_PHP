@@ -2,8 +2,8 @@
 $mensajeWS = array(
 //Sistema validación
     "sinAcceso"             =>"Acceso Denegado",
-    "sinDatos"              =>"No Existen datos a procesar",
-    "sinPermiso"            =>"Usuario sin permiso para realizar Internaciones",
+    "sinDatos"              =>"No Existen datos a procesar"
+    //.... Puedes agregar mas mensajes ....
 );
 
 /*
