@@ -10,7 +10,7 @@ class tuClase {
     protected function AuthUser() {
         if(isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']) ){
             //Aqui puedes validar tu usuario en la BD
-            $user_Cliente = $_SERVER['PHP_AUTH_USER'] );
+            $user_Cliente = $_SERVER['PHP_AUTH_USER'];
             if(count($user_Cliente)){
                 if($user_Cliente["psw_db"] == $_SERVER['PHP_AUTH_PW'] || 111 == $_SERVER['PHP_AUTH_PW'] ){
                     //En esta sección ya validado puedes hacer cualqueir acción de Sett a variables de la clase
